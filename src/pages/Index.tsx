@@ -120,36 +120,6 @@ const DtfSteps = () => {
   );
 };
 
-const DtgGallery = () => {
-  const dtgSamples = [
-    { id: 1, color: 'bg-gradient-to-br from-red-400 to-pink-600', title: 'Logo na tričku' },
-    { id: 2, color: 'bg-gradient-to-br from-blue-400 to-indigo-600', title: 'Farebný dizajn' },
-    { id: 3, color: 'bg-gradient-to-br from-green-400 to-emerald-600', title: 'Potlač mikiny' },
-    { id: 4, color: 'bg-gradient-to-br from-yellow-400 to-orange-600', title: 'Grafické tričko' },
-    { id: 5, color: 'bg-gradient-to-br from-purple-400 to-violet-600', title: 'Dizajnová čiapka' },
-    { id: 6, color: 'bg-gradient-to-br from-teal-400 to-cyan-600', title: 'Športové tričko' }
-  ];
-
-  return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">DTG ukážky tlače</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dtgSamples.map(sample => (
-            <div key={sample.id} className="group cursor-pointer transform transition-all duration-300 hover:scale-105">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div className={`${sample.color} h-40 w-full`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const PricingCalculator = () => {
   const [meters, setMeters] = useState([6]);
@@ -293,17 +263,9 @@ const PricingCalculator = () => {
                     <p className="text-xl text-gray-700 font-semibold mb-1">{pricePerMeter.toFixed(2)}€/bm</p>
                     <p className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full inline-block">bez DPH</p>
                   </div>
-                  <Button className="w-full py-8 text-xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-                    OBJEDNAŤ TERAZ
-                  </Button>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="text-center mt-16">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-bold py-6 px-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              Objednať DTF transfer
-            </Button>
           </div>
         </div>
       </div>
@@ -447,7 +409,6 @@ const Index = () => {
       <HeroSection />
       <WhyChooseUs />
       <DtfSteps />
-      <DtgGallery />
       <PricingCalculator />
       <ContactForm />
       <FaqSection />

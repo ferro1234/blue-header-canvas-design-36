@@ -96,10 +96,6 @@ const Header = () => {
                 <span>Cenník</span>
                 <ChevronDown size={14} />
               </div>
-              <Link to="/ako-pripravit-grafiku" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer">
-                <span>Ako pripraviť grafiku</span>
-                <ChevronDown size={14} />
-              </Link>
               <span 
                 onClick={() => scrollToSection('faq')}
                 className="text-gray-700 hover:text-blue-600 cursor-pointer"
@@ -116,8 +112,11 @@ const Header = () => {
 
             {/* CTA Button */}
             <div className="flex items-center ml-5">
-              <Button className="btn-primary">
-                Objednať DTF tlač →
+              <Button 
+                className="btn-secondary"
+                onClick={() => scrollToSection('kontakt')}
+              >
+                Kontakt
               </Button>
             </div>
           </div>

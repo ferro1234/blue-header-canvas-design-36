@@ -34,11 +34,8 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary text-lg px-8 py-4">
-                Objednať DTF tlač →
-              </Button>
               <Button className="btn-secondary text-lg px-8 py-4">
                 Kontaktujte nás →
               </Button>
