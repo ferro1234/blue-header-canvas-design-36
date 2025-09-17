@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-white overflow-hidden">
+    <main className="relative bg-white overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center py-8">
           {/* Left content */}
@@ -15,7 +15,7 @@ const HeroSection = () => {
               <div className="flex items-center gap-4">
                 <img 
                   src="/lovable-uploads/5f7c0d41-3393-49e2-a30b-4cefdbf0f031.png"
-                  alt="Jaroslav Kušnirer"
+                  alt="Jaroslav Kušnirer - majiteľ PrintBe tlačiarne špecializujúcej sa na DTF tlač"
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -47,8 +47,9 @@ const HeroSection = () => {
             <div className="relative float-animation">
               <img 
                 src="/lovable-uploads/96200e31-b2d0-4300-b340-756abb96d1f0.png"
-                alt="Business Magazine"
+                alt="Business magazín s ukážkami DTF tlače na textil - kvalitné termotransfery PrintBe"
                 className="w-[537px] h-auto transform rotate-12 hover:rotate-6 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           </div>
@@ -61,7 +62,7 @@ const HeroSection = () => {
           <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#2563eb"/>
         </svg>
       </div>
-    </section>
+    </main>
   );
 };
 

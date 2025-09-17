@@ -37,10 +37,10 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="preco-my" className="bg-gradient-to-b from-blue-600 to-blue-800 py-20">
+    <section id="preco-my" className="bg-gradient-to-b from-blue-600 to-blue-800 py-20" aria-labelledby="preco-my-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Prečo si vybrať nás</h2>
+          <h2 id="preco-my-heading" className="text-4xl font-bold text-white mb-4">Prečo si vybrať nás</h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -90,10 +90,10 @@ const DtfSteps = () => {
   ];
 
   return (
-    <section id="ako-to-funguje" className="bg-white py-12">
+    <section id="ako-to-funguje" className="bg-white py-12" aria-labelledby="ako-to-funguje-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ako to funguje</h2>
+          <h2 id="ako-to-funguje-heading" className="text-3xl font-bold text-gray-900 mb-4">Ako to funguje</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -152,10 +152,10 @@ const PricingCalculator = () => {
   }, [meters, shipping, graphics]);
 
   return (
-    <section id="cennik" className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 py-20">
+    <section id="cennik" className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 py-20" aria-labelledby="cennik-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h2 id="cennik-heading" className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Cenník DTF tlače
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
@@ -275,10 +275,10 @@ const PricingCalculator = () => {
 
 const ContactForm = () => {
   return (
-    <section id="kontakt" className="bg-gradient-to-b from-blue-700 to-blue-900 py-12">
+    <section id="kontakt" className="bg-gradient-to-b from-blue-700 to-blue-900 py-12" aria-labelledby="kontakt-heading">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-white mb-4">Kontaktujte nás</h2>
+          <h2 id="kontakt-heading" className="text-4xl font-bold text-white mb-4">Kontaktujte nás</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -341,10 +341,10 @@ const ContactForm = () => {
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="bg-gradient-to-b from-blue-700 to-blue-900 py-10">
+    <section id="faq" className="bg-gradient-to-b from-blue-700 to-blue-900 py-10" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white mb-4">Často kladené otázky</h2>
+          <h2 id="faq-heading" className="text-4xl font-bold text-white mb-4">Často kladené otázky</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
         </div>
         <Accordion type="single" collapsible className="space-y-4">
