@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import { Footer } from '@/components/Footer';
-import { FileText, Printer, Truck, Zap, Send, Clock, Award, Gauge, CheckCircle } from 'lucide-react';
+import { FileText, Printer, Truck, Zap, Clock, Award, Gauge, CheckCircle } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
+import { ContactForm } from '@/components/ContactForm';
+import { Toaster } from '@/components/ui/toaster';
 
 const WhyChooseUs = () => {
   const advantages = [
@@ -273,71 +272,6 @@ const PricingCalculator = () => {
   );
 };
 
-const ContactForm = () => {
-  return (
-    <section id="kontakt" className="bg-gradient-to-b from-blue-700 to-blue-900 py-12" aria-labelledby="kontakt-heading">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <h2 id="kontakt-heading" className="text-4xl font-bold text-white mb-4">Kontaktujte nás</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div className="text-center md:text-left"></div>
-          <div className="text-center md:text-right"></div>
-        </div>
-        <div className="max-w-3xl mx-auto">
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input
-                placeholder="Meno a Priezvisko"
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200 focus:border-yellow-400 focus:ring-yellow-400 h-12 text-lg"
-              />
-              <Input
-                placeholder="Firma (Voliteľné)"
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200 focus:border-yellow-400 focus:ring-yellow-400 h-12 text-lg"
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input
-                type="email"
-                placeholder="vas@email.sk"
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200 focus:border-yellow-400 focus:ring-yellow-400 h-12 text-lg"
-              />
-              <Input
-                placeholder="Tel. číslo (Voliteľné)"
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200 focus:border-yellow-400 focus:ring-yellow-400 h-12 text-lg"
-              />
-            </div>
-            <Textarea
-              placeholder="Tu napíšte vašu správu"
-              rows={4}
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200 focus:border-yellow-400 focus:ring-yellow-400 resize-none text-lg"
-            />
-            <div className="flex items-start space-x-3">
-              <Checkbox
-                id="privacy"
-                className="bg-white/10 border-white/20 data-[state=checked]:bg-yellow-400 data-[state=checked]:border-yellow-400 mt-1"
-              />
-              <Label htmlFor="privacy" className="text-blue-100 leading-relaxed cursor-pointer">
-                Potvrdzujem, že som si prečítal/a{' '}
-                <a href="#" className="text-yellow-400 hover:text-yellow-300 underline">
-                  Ochranu osobných údajov
-                </a>
-                .
-              </Label>
-            </div>
-            <div className="text-center pt-2">
-              <Button className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-blue-900 text-lg font-bold py-4 px-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
-                <Send className="w-5 h-5" />
-                Odoslať
-              </Button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const FaqSection = () => {
   return (
@@ -413,6 +347,7 @@ const Index = () => {
       <ContactForm />
       <FaqSection />
       <Footer />
+      <Toaster />
     </div>
   );
 };
