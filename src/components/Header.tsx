@@ -39,7 +39,7 @@ const Header = () => {
       {/* Top contact bar */}
       <div className="bg-blue-600 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-1 md:space-y-0">
             <div className="flex items-center space-x-2">
               <Phone size={14} />
               <span>0918 412 692</span>
@@ -49,7 +49,7 @@ const Header = () => {
               <span>vyroba@365tlac.sk</span>
             </div>
           </div>
-          <div className="text-xs">
+          <div className="text-xs hidden md:block">
             Tlačíme 7 dní v týždni od 8:00 do 17:00 mimo otváracie hodiny nás prosím kontaktujte osobne
           </div>
         </div>
