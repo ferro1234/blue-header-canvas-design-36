@@ -21,7 +21,7 @@ export const Footer = ({ topWaveColor = "#1e3a8a" }: FooterProps) => {
         </svg>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-6 text-white">Kontakt</h3>
             <div className="space-y-4">
@@ -64,17 +64,6 @@ export const Footer = ({ topWaveColor = "#1e3a8a" }: FooterProps) => {
               </a>
               <a href="mailto:vyroba@365tlac.sk" className="block text-white hover:text-yellow-400 transition-colors font-semibold">
                 vyroba@365tlac.sk
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-white">Objednávky</h3>
-            <div className="space-y-3">
-              <a href="#" className="block text-gray-400 hover:text-white transition-colors">
-                Objednať DTF transfery
-              </a>
-              <a href="/ako-pripravit-grafiku" className="block text-gray-400 hover:text-white transition-colors">
-                Ako pripraviť grafiku?
               </a>
             </div>
           </div>

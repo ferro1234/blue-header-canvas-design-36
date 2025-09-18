@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import { Footer } from '@/components/Footer';
+import { ContactInfo } from '@/components/ContactInfo';
 import { FileText, Printer, Truck, Zap, Clock, Award, Gauge, CheckCircle } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -344,7 +345,7 @@ const Index = () => {
       <WhyChooseUs />
       <DtfSteps />
       <PricingCalculator />
-      <ContactForm />
+      <ContactInfo />
       <FaqSection />
       <Footer />
       <Toaster />

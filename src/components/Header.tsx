@@ -42,11 +42,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone size={14} />
-              <span>+0012345678</span>
+              <span>0918 412 692</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail size={14} />
-              <span>printbe@infor.com</span>
+              <span>vyroba@365tlac.sk</span>
             </div>
           </div>
           <div className="text-xs">
@@ -61,11 +61,8 @@ const Header = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
-                </div>
-                <span className="text-xl font-bold text-gray-900">PrintBe</span>
+              <Link to="/" className="flex items-center">
+                <span className="text-2xl font-bold text-blue-600">tlacdtf.sk</span>
               </Link>
             </div>
 
