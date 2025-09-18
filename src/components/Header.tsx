@@ -1,14 +1,16 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Phone, Mail } from "lucide-react";
+import { ChevronDown, Phone, Mail, Menu, X } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     // If we're on the home page, scroll directly to the section
     if (location.pathname === '/') {
       const element = document.getElementById(sectionId);
@@ -107,8 +109,18 @@ const Header = () => {
               </span>
             </nav>
 
-            {/* CTA Button */}
-            <div className="flex items-center ml-5">
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-gray-700 hover:text-blue-600"
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+
+            {/* Desktop CTA Button */}
+            <div className="hidden md:flex items-center ml-5">
               <Button 
                 className="btn-secondary"
                 onClick={() => scrollToSection('kontakt')}
@@ -118,6 +130,59 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        {/* Mobile menu dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t shadow-lg">
+            <div className="px-4 py-2 space-y-1">
+              <Link 
+                to="/" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Úvod
+              </Link>
+              <button 
+                onClick={() => scrollToSection('preco-my')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              >
+                Prečo My
+              </button>
+              <button 
+                onClick={() => scrollToSection('ako-to-funguje')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              >
+                Ako to funguje
+              </button>
+              <button 
+                onClick={() => scrollToSection('cennik')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              >
+                Cenník
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              >
+                FAQ
+              </button>
+              <button 
+                onClick={() => scrollToSection('kontakt')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              >
+                Kontakt
+              </button>
+              <div className="pt-2">
+                <Button 
+                  className="btn-secondary w-full"
+                  onClick={() => scrollToSection('kontakt')}
+                >
+                  Kontakt
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
     </div>
   );
